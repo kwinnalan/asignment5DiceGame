@@ -31,9 +31,9 @@ public class Die
     }
     
     /**
-     * This method will simulate throwing a dice by returning an integer between 1 and the number of sides.
+     * This method will simulate rolling a die by returning an integer between 1 and the number of sides.
      *
-     *@return an integer between 1 and the number of sides inclusive.
+     *@return a random integer between 1 and the number of sides inclusive.
      */
     public int roll()
     {
