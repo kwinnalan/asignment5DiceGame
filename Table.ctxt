@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=Table
+comment0.text=\r\n\ Class\ Table\ is\ a\ place\ for\ our\ dice\ game\ to\ be\ played.\ \r\n\r\n\ @author\ Kwinn\ Danforth\ \ \ \r\n\ @version\ 1.0.01\r\n
+comment1.params=numOfDice\ targetNumber\ dieType
+comment1.target=Table(int,\ int,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Table\r\n\ Takes\ in\ the\ required\ info\ and\ sets\ up\ the\ dice\ game.\r\n\ \r\n\ @param\ The\ required\ information\ for\ the\ game;\ int\ numOfDice,\ int\ targetNumber,\ int\ dieType\r\n
+comment2.params=
+comment2.target=void\ intro()
+comment2.text=\r\n\ This\ Method\ will\ print\ the\ directions\ and\ rules\ for\ the\ dice\ gameplay.\r\n\r\n
+comment3.params=
+comment3.target=void\ play()
+comment3.text=\r\n\ This\ Method\ will\ play\ the\ dice\ game.\r\n\r\n
+comment4.params=
+comment4.target=void\ rollAllDie()
+comment4.text=\r\n\ This\ Method\ rolls\ all\ the\ die\ at\ the\ begining\ of\ the\ game.\r\n\r\n
+comment5.params=
+comment5.target=void\ countOnes()
+comment5.text=\r\n\ This\ Method\ will\ count\ all\ the\ ones\ out\ of\ the\ die\ rolls.\r\n\ Then\ will\ check\ to\ make\ sure\ there\ are\ not\ over\ 50%\ ones\ before\ continue.\r\n\r\n
+comment6.params=
+comment6.target=void\ checkMatchingDie()
+comment6.text=\r\n\ This\ Method\ will\ check\ to\ see\ what\ rolls\ match\ the\ dice\ type\ chosen\ for\ the\ game.\r\n\ Then\ will\ run\ the\ 'run'\ method\ for\ each,\ to\ start\ a\ 'run'\ of\ rolls\ to\ continue\ the\ game.\r\n\ \r\n
+comment7.params=
+comment7.target=void\ run()
+comment7.text=\r\n\ This\ Method\ starts\ a\ run\ of\ rolls\ and\ adds\ them\ up\ to\ try\ and\ reach\ the\ chosen\ target\ number\ for\ the\ game.\r\n\r\n
+numComments=8
