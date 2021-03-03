@@ -21,7 +21,6 @@ public class Table
     private int  numOfDice;
     private int  targetNumber;
     private int dieType;
-    private Die die;
     
     private ArrayList<Integer> rolls = new ArrayList<>();
     private int numOnes;
@@ -41,7 +40,6 @@ public class Table
     this.numOfDice = checkNumOfDice(numOfDice);
     this.targetNumber = checkTargetNumber(targetNumber);
     this.dieType = checkDieType(dieType);
-    this.die = new Die(this.dieType);
     this.numOnes = 0;
     this.shotCount = 0;
     this.roll = 0;
@@ -62,7 +60,6 @@ public class Table
     this.numOfDice = DEFAULT_NUM_OF_DICE;
     this.targetNumber = checkTargetNumber(targetNumber);
     this.dieType = checkDieType(dieType);
-    this.die = new Die(this.dieType);
     this.numOnes = 0;
     this.shotCount = 0;
     this.roll = 0;
@@ -83,7 +80,6 @@ public class Table
     this.numOfDice = DEFAULT_NUM_OF_DICE;
     this.targetNumber = checkTargetNumber(targetNumber);
     this.dieType = DEFAULT_DIE_TYPE;
-    this.die = new Die(this.dieType);
     this.numOnes = 0;
     this.shotCount = 0;
     this.roll = 0;
@@ -104,7 +100,6 @@ public class Table
     this.numOfDice = DEFAULT_NUM_OF_DICE;
     this.targetNumber = DEFAULT_TARGET_NUMBER;
     this.dieType = DEFAULT_DIE_TYPE;
-    this.die = new Die(this.dieType);
     this.numOnes = 0;
     this.shotCount = 0;
     this.roll = 0;
@@ -211,7 +206,7 @@ public class Table
     public void rollAllDie()
     {
       for(int i = 0; i < numOfDice; i++){
-        rolls.add(die.roll());
+        rolls.add(new Die(this.dieType).roll());
         System.out.println("Die "+ (i+1) + ": " + rolls.get(i));
         }  
     }
@@ -253,7 +248,7 @@ public class Table
                 anyMatch = true;
                 shotCount += rolls.get(i);
                 System.out.println("ShotCount = " + shotCount);
-                roll = die.roll();
+                roll = new Die(this.dieType).roll();
                 System.out.println("1st Roll = " + roll);
                 shotCount = (rolls.get(i) + roll);
                 System.out.println("ShotCount = " + shotCount);
@@ -270,7 +265,7 @@ public class Table
      */
     public void run(){
         while(shotCount < targetNumber && shotCount != targetNumber){
-            roll = die.roll();
+            roll = new Die(this.dieType).roll();
             System.out.println("You are at " + shotCount);
             System.out.println("Next Roll is " + roll);
             shotCount += roll;
